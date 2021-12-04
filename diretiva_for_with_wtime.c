@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
 
 Programa que mostra, de maneira simples, como a diretiva for paralela pode ser usada
-
+e a função que mede o tempo de execução do bloco paralelo
 //Gildson Bezerra dos Santos
 Criado em 03/12/21
 
