@@ -36,7 +36,10 @@ inserir duas variáveis do tipo double, uma para começar a contar o tempo e out
 
 Essa diretiva permite apenas que uma thread por vez tenho acesso a uma variável global, variáveis globais são declaradas fora dos blocos paralelos.
 
-* Diretiva de "configuração" # pragma omp parallel num_threads(thread_count)
+* Diretiva de paralela # pragma omp parallel num_threads(thread_count)
 
 Essa diretiva limite o número de threads que devem executar a próxima linha de código.
 
+* Diretiva de paralela for # pragma omp parallel for num_threads(thread_count)
+
+Essa diretiva é exclusiva para o loop for, tem um exemplo dele na pasta openMP.
