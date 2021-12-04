@@ -27,3 +27,16 @@ Esse argumento num_threads é a quantidade de threads que você quer que o compi
 Se queremos definir a quantidade de threads que uma parte do código vai ter, utilizamos #pragma omp parallel num_threads(thread_count) antes do código.
 
 Para evitar que todas as threads tenha acesso a variáveis globais ao mesmo tempo, utilizaremos #pragma omp critical para definir que a parte a seguir do código terá acesso mutualmente excludente.
+
+Para medir o tempo de um processo paralelo, o tempo medido aqui é dado em segundos
+
+inserir duas variáveis do tipo double, uma para começar a contar o tempo e outra para terminar a contagem, ambas as variáveis receberão omp_get_wtime()
+
+* Diretiva critical # pragma omp critical
+
+Essa diretiva permite apenas que uma thread por vez tenho acesso a uma variável global, variáveis globais são declaradas fora dos blocos paralelos.
+
+* Diretiva de "configuração" # pragma omp parallel num_threads(thread_count)
+
+Essa diretiva limite o número de threads que devem executar a próxima linha de código.
+
