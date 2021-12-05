@@ -38,7 +38,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
-#include <time.h>
+#include <time.h> //biblioteca timer.h alterada para time.h
 
 /* Serial functions */
 void Get_args(int argc, char* argv[], int* thread_count_p, 
@@ -192,7 +192,8 @@ void Omp_mat_vect(double A[], double x[], double y[],
       int m, int n, int thread_count) {
    int i, j;
    double start, finish, elapsed, temp;
-
+   
+   //retirado o GET_TIME();
    start = omp_get_wtime();
 #  pragma omp parallel for num_threads(thread_count)  \
       default(none) private(i, j, temp)  shared(A, x, y, m, n)
@@ -204,6 +205,7 @@ void Omp_mat_vect(double A[], double x[], double y[],
       }
    }
 
+   //retirado o GET_TIME():
    finish = omp_get_wtime();
    elapsed = finish - start;
    printf("Elapsed time = %e seconds\n", elapsed);
